@@ -13,6 +13,15 @@ export const mutations = {
 export const getters = {
     getRotations: function(state) {
         return state.rotations.data.shares;
+    },
+    getRotationById: function(state) {
+        let rotations = state.rotations.data.shares;
+        
+        return function(id) {
+            return rotations.find(function(item){
+                return id == item.id;
+            });
+        }
     }
 };
 

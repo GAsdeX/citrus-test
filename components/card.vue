@@ -3,7 +3,10 @@
             :img-src="data.images.preview.url"
             img-top>
       <p class="card-text" v-text="data.content.preview"></p>
-      <b-button variant="primary">Узнать больше</b-button>
+      
+      <router-link :to="/rotation/ + data.id">
+          <b-button variant="primary">Узнать больше</b-button>
+      </router-link>
       <div slot="footer">
           <div>
               <small class="text-muted" v-text="dateFrom"></small>
