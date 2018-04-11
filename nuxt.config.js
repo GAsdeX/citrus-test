@@ -18,7 +18,10 @@ module.exports = {
   */
 
   modules: [
-      'semantic-ui-vue/nuxt' // includes styles from semantic-ui-css
+	  'bootstrap-vue/nuxt',
+	
+	  // Or if you have custom bootstrap CSS...
+	  ['bootstrap-vue/nuxt', { css: false }]
   ],
   loading: { color: '#3B8070' },
   /*

@@ -14,7 +14,7 @@ export const getters = {
     getRotations: function(state) {
         return state.rotations.data.shares;
     }
-}
+};
 
 export const actions = {
     updateRotations: function(context) {
