@@ -1,13 +1,14 @@
 <template>
-    <sui-menu :widths="3">
-    <sui-menu-item>About</sui-menu-item>
-    <sui-menu-item>Rotations</sui-menu-item>
-    <sui-menu-item>Lang</sui-menu-item>
-  </sui-menu>
+    <b-nav>
+        <b-nav-item active v-if="offerPage" :to="{name: 'index'}">Обратно</b-nav-item>
+        
+        <b-nav-item active>Об авторе</b-nav-item>
+    </b-nav>
 </template>
 
 <script>
     export default {
+    	props: ['offerPage'],
         data : function() {
             return {
                 message: "fff"

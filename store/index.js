@@ -4,7 +4,7 @@ var axios = require('axios');
 
 export const state = () => ({
     list: []
-})
+});
 
 export const actions = {
     nuxtServerInit(store, context) {

@@ -1,34 +1,46 @@
 <template>
-    <div class="rotation-content" v-if="rotation">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-7">
-                    <b-img :src="rotation.images.full.url" fluid alt="Responsive image" />
-                    <h5 class="my-3" v-text="rotation.title"></h5>
-                    
-                </div>
-                <div class="col-md-5">
-                    <p v-text="dateFrom"></p>
-                    <p v-text="dateTo"></p>
-                </div>
+    <div class="container">
+        <div class="rotation-content" v-if="rotation">
+            <site-header offerPage="true"/>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-7">
+                        <b-img :src="rotation.images.full.url" fluid alt="Responsive image" />
+                        <h5 class="my-3" v-text="rotation.title"></h5>
                 
-            </div>
-            <div class="row">
-                <div class="col-md-12 col-sm-12 col-xs-12">
-                    <div class="content">
-                        <p v-html="rotation.content.full    "></p>
+                    </div>
+                    <div class="col-md-5">
+                        <p v-text="dateFrom"></p>
+                        <p v-text="dateTo"></p>
+                    </div>
+            
+                </div>
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="content">
+                            <p v-html="rotation.content.full    "></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    
 </template>
 
 <script>
+    import siteHeader from '~/components/siteHeader.vue'
+    
 	export default {
 		data : function() {
 			return {
-				message: "fff"
+				message: "fff",
+                products: null
 			}
 		},
         computed: {
@@ -47,12 +59,15 @@
 		
 		        return date;
 	        }
+        },
+        components: {
+			'site-header' : siteHeader
         }
 	}
 </script>
 
 <style>
     .rotation-content {
-        padding-top: 50px;
+        /*padding-top: 50px;*/
     }
 </style>

@@ -1,15 +1,15 @@
 <template>
     <div class="global-container">
-        <site-header></site-header>
-        <sui-button primary>click me</sui-button>
         <div class="container">
+            <site-header />
             <div class="row" v-if="rotations">
                 <b-card-group columns>
                     <rotation-card class="four wide column" v-for="rotation in rotations" :key="rotation.id" :data="rotation"></rotation-card>
                 </b-card-group>
-                
+    
             </div>
         </div>
+        
     </div>
 </template>
 
